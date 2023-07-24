@@ -9,6 +9,8 @@
   --clr-section-num: rgb(106, 123, 151);
   --clr-section-text: rgb(55, 69, 96);
   --clr-footer: rgb(98, 117, 159);
+
+  border: 1px solid red;
 }
 body {
   background-color: var(--clr-light);
@@ -151,31 +153,78 @@ header {
   position: relative;
   width: max-content;
   font-family: var(--ff-2);
-  height: 180px;
+  height: 100px;
   color: var(--clr-section-num);
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.5em 1.7em;
+  padding: 0.3em 1em;
 }
 
 .section-heading div {
-  /* line-height: 0; */
   position: absolute;
-  bottom: -0.09em;
-  left: 62%;
+  bottom: -0.26em;
+  left: 2em;
+}
+
+.section-heading.climb div {
+  left: 2.1em;
+}
+
+.section-heading.climb p {
+  position: absolute;
+  max-width: 40ch;
+  /* width: 80%; */
+  top: 9em;
+  left: 25em;
 }
 
 .section-heading h3 {
   color: var(--clr-hero-dark-blue);
-  font-size: 2rem;
+  font-size: 1rem;
+}
+
+.section-heading p {
+  font-size: 0.5rem;
+  max-width: 60ch;
+  color: var(--clr-hero-dark-blue);
 }
 
 .section-heading span {
   display: block;
   background-color: var(--clr-section-num);
-  width: 18px;
-  height: 18px;
-  /* margin-top: 2px; */
+  width: 10px;
+  height: 10px;
   align-self: baseline;
+}
+
+@media screen and (min-width: 768px) {
+  .section-heading {
+    height: 180px;
+    font-size: 7rem;
+    padding: 0.5em 1.7em;
+  }
+
+  .section-heading div {
+    bottom: -0.09em;
+    left: 2.7em;
+  }
+
+  .section-heading.climb div {
+    left: 2.8em;
+  }
+
+  .section-heading h3 {
+    font-size: 2rem;
+  }
+
+  .section-heading span {
+    width: 18px;
+    height: 18px;
+  }
+
+  .section-heading p {
+    font-size: 0.7rem;
+    max-width: 150ch;
+  }
 }
