@@ -177,7 +177,7 @@ header {
   max-width: 65ch;
   margin-top: -2em;
   margin-left: 6em;
-  color: var(--clr-hero-dark-blue);
+  color: var(--clr-section-text);
 }
 
 .section-heading.climb p {
@@ -235,5 +235,67 @@ header {
     max-width: 100ch;
     top: 6.5rem;
     left: 12rem;
+  }
+}
+
+/* ? Carousel */
+
+.carousel-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2em;
+  background-color: rgba(98, 117, 159, 0.7);
+}
+
+.carousel {
+  width: 320px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex-shrink: 0;
+  margin-right: 0.8em;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #888;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    width: 800px;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .slide {
+    width: 190px;
   }
 }
