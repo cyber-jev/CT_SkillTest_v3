@@ -10,7 +10,7 @@
   --clr-section-text: rgb(55, 69, 96);
   --clr-footer: rgb(98, 117, 159);
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 body {
   background-color: var(--clr-light);
@@ -147,47 +147,49 @@ header {
 .section-history-container {
   background-image: url(../assets/01-history-section-background.png);
   min-height: 120vh;
+  position: relative;
 }
 
 .section-heading {
   position: relative;
-  width: max-content;
   font-family: var(--ff-2);
-  height: 100px;
   color: var(--clr-section-num);
   font-size: 5rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.3em 1em;
+  margin: auto;
+  padding: 0.5em;
 }
 
 .section-heading div {
   position: absolute;
-  bottom: -0.26em;
-  left: 2em;
+  top: 6.3rem;
+  left: 7.3rem;
 }
 
 .section-heading.climb div {
-  left: 2.1em;
+  top: 6.4rem;
+  left: 8.2rem;
+}
+
+.section-heading p {
+  font-size: 0.5rem;
+  max-width: 65ch;
+  margin-top: -2em;
+  margin-left: 6em;
+  color: var(--clr-hero-dark-blue);
 }
 
 .section-heading.climb p {
   position: absolute;
-  max-width: 40ch;
-  /* width: 80%; */
-  top: 9em;
-  left: 25em;
+  max-width: 45ch;
+  top: 5rem;
+  left: 9rem;
 }
 
 .section-heading h3 {
   color: var(--clr-hero-dark-blue);
   font-size: 1rem;
-}
-
-.section-heading p {
-  font-size: 0.5rem;
-  max-width: 60ch;
-  color: var(--clr-hero-dark-blue);
 }
 
 .section-heading span {
@@ -200,18 +202,19 @@ header {
 
 @media screen and (min-width: 768px) {
   .section-heading {
-    height: 180px;
-    font-size: 7rem;
-    padding: 0.5em 1.7em;
+    font-size: 8rem;
+    max-width: 920px;
+    padding: 0;
   }
 
   .section-heading div {
-    bottom: -0.09em;
-    left: 2.7em;
+    top: 5.6rem;
+    left: 8rem;
   }
 
   .section-heading.climb div {
-    left: 2.8em;
+    top: 5.5rem;
+    left: 8.9rem;
   }
 
   .section-heading h3 {
@@ -226,5 +229,11 @@ header {
   .section-heading p {
     font-size: 0.7rem;
     max-width: 150ch;
+  }
+
+  .section-heading.climb p {
+    max-width: 100ch;
+    top: 6.5rem;
+    left: 12rem;
   }
 }
