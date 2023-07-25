@@ -46,7 +46,7 @@ setInterval(nextSlide, 5000); // Auto slide every 5 seconds
 
 // ? tab starts
 function openTab(evt, tabName) {
-  var i, tabContent, tabButtons;
+  let i, tabContent, tabButtons;
   tabContent = document.getElementsByClassName("tab-content");
   for (i = 0; i < tabContent.length; i++) {
     tabContent[i].style.display = "none";
@@ -72,5 +72,31 @@ document.getElementById("tabButton2").addEventListener("click", function () {
 document.getElementById("tab1").style.display = "block";
 document.querySelector(".tab-button.active").classList.remove("active");
 document.getElementById("tabButton1").classList.add("active");
+// ?  tabs ends here
 
-// ? accordion starts
+// ? accordion starts here
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+function toggleAccordion() {
+  this.classList.toggle("active");
+  const accordionContent = this.querySelector(".accordion-content");
+  accordionContent.classList.toggle("show");
+
+  // Close other accordions if any is open
+  accordionItems.forEach((item) => {
+    if (item !== this && item.classList.contains("active")) {
+      item.classList.remove("active");
+      item.querySelector(".accordion-content").classList.remove("show");
+    }
+  });
+}
+
+accordionItems.forEach((item) => {
+  item.addEventListener("click", toggleAccordion);
+});
+
+// Automatically open the first accordion
+const firstAccordion = accordionItems[0];
+firstAccordion.classList.add("active");
+firstAccordion.querySelector(".accordion-content").classList.add("show");
+// ? accordion ends here

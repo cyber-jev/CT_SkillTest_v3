@@ -380,7 +380,7 @@ header {
 }
 
 .tab-schedule {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
   max-width: 350px;
   padding: 2em;
 }
@@ -421,6 +421,59 @@ header {
     display: block;
   }
 }
+
+/* ? accordion starts */
+
+.accordion-header {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.accordion-header {
+  cursor: pointer;
+  background-color: var(--clr-section-num);
+  color: var(--clr-hero-dark-blue);
+  border: none;
+  padding: 0.6em 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: max-content;
+  margin: 1px;
+}
+
+/* .accordion-header.active {
+  position: relative;
+  background-color: var(--clr-section-num);
+  color: var(--clr-hero-dark-blue);
+}
+
+.accordion-header.active::after {
+  position: absolute;
+  content: "";
+  width: 75%;
+  height: 2px;
+  background-color: var(--clr-hero-dark-blue);
+  left: 12%;
+  bottom: 7px;
+} */
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .accordion-wrapper {
+    display: none;
+  }
+}
+
+/* ? accordion ends */
 
 footer {
   background-color: var(--clr-footer);
